@@ -1,0 +1,19 @@
+Es gibt eine ganze Reihe von Formaten, mit denen Textdateien
+geschrieben und gelesen werden (können).
+'Format' bezieht sich hier auf den Aufbau und die Systematik
+der gesammelten Daten.
+Ein berühmtes, (noch immer) viel verwendetes Beispiel ist das
+csv-Format. CSV steht für comma separated value, schlußendlich
+werden die Daten in Zeilen untereinander geschrieben und die
+Werte der einzelnen Spalten werden durch Komma getrennt.
+Da in Westeuropa das Komma zur Formatierung von Gleitkommazahlen
+verwendet wird, wird hier das Semikolon verwendet.
+Somit entsteht eine 'Standard-Aufgabe': zusammengehörige Daten
+(z.B. von einem Auto) werden hintereinander geschrieben und dabei
+durch Semikola getrennt, in weiteren Zeilen können weitere Daten
+untergebracht werden. Da es sich um eine Standardaufgabe handelt,
+steht (mind.) eine Bibliothek zur Verfügung, die die Arbeit
+übernimmt.
+
+Der Import und Export von Daten im csv-Format ist nur ein Beispiel;
+es gibt weitere Implementierungen z.B. für XML, JSON usw.

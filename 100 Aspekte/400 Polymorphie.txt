@@ -1,0 +1,36 @@
+In statisch typisierten Programmiersprachen ist ein wichtiger Mechanismus die Polymorphie.
+
+In einer statisch typisierten Programmiersprache muß z.B. bei Funktionen angegeben werden,
+welcher Typ übergeben werden darf (!). Bezogen auf das Zoo-Beispiel:
+
+def TiereAngucken(Tier IrgendeinTierImZoo):
+    IrgendeinTierImZoo.Posen()
+
+Eine solche Definition (die es in Python ja nicht gibt) führt dazu, daß (zunächst!) nur
+Objekte aus der Klasse Tier übergeben werden dürfen. Was aber bedeutet das? in der Methode
+TiereAngucken können dann nur noch Methoden aufgerufen werden, die durch die Klasse Tier
+definiert wurden.
+Nun verfügen aber alle Klassen, die von Tier abgeleitet wurden, aufgrund der Vererbung
+AUCH über die Methoden der Tier-Klasse, denn die wurden ihnen durch die Vererbung ja
+gewissermaßen eingebaut. Implementiert die Klasse Tier die Methode 'Posen', kann man diese
+Methode auch für einen Löwen aufrufen, denn der Löwe ist ja von Tier abgeleitet.
+
+Dieser Mechanismus wird Polymorphie (= Vielgestaltigkeit) genannt, denn ein Tier kommt in
+vielerlei Gestalten daher: in Gestalt eines Löwen, in Gestalt einer Gazelle, einer Kuh usw.
+Und da alle diese Tier schlußendlich Tiere sind, können sie posen, kann für sie also die
+geerbte Methode Posen verwendet werden.
+
+In Python spielt dieser Mechanismus aber eigentlich keine Rolle, da es in Python keine
+statische Typisierung gibt. In Python muß ja eben nicht der Typ angegeben werden, der z.B. von
+einer Funktion erwartet wird, in Python lautete die Funktionsdefinition:
+
+def TiereAngucken(IrgendeinTierImZoo):
+    IrgendeinTierImZoo.Posen()
+
+Dieser Funktion kann nun jedes Objekt übergeben werden, auch solche, die nicht von Tier
+abgeleitet sind. Python nimmt das übergebene OPbjekt erst einmal klaglos entgegen und
+probiert gewissermaßen den Aufruf der Methode 'Posen' aus. Verfügt das übergebene Objekt
+über diese Methode, ist alles in Ordnung und: egal, was für ein Typ da übergeben wurde.
+Steht die Methode nicht zur Verfügung, reagiert das Programm mit einem entsprechenden
+Fehler.
+
