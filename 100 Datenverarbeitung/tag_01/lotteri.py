@@ -1,0 +1,24 @@
+print("Willkommen in der Lotterie!")
+number1 = int(input("Bitte wähle eine Zahl zwischen 1 und 49: "))
+number2 = int(input("Bitte wähle eine Zahl zwischen 1 und 49: "))
+number3 = int(input("Bitte wähle eine Zahl zwischen 1 und 49: "))
+
+#Gewinnzahl 1: 3
+#Gewinnzahl 2: 14
+#Gewinnzahl 3: 22
+
+if number1 == 1: 3
+else:
+    print("Du hast leider verloren...")
+
+if number2 == 1: 14
+else:
+    print("Du hast leider verloren...")
+    
+if number3 == 1: 22
+
+print("Herzlichen Glückwunsch, du hast die Lotterie gewonnen!")
+
+else:
+print("Du hast leider verloren...")
+
